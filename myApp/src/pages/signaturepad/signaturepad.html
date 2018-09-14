@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign Below</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <signature-pad [options]="signaturePadOptions"></signature-pad>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button color="danger" (click)="drawCancel()">Cancel</button>
+      </ion-col>
+      <ion-col col-4>
+          <button ion-button color="light" (click)="drawClear()">Clear</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button color="secondary" (click)="drawComplete()">Done</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div>
+      <label>Height: {{val1}}</label>
+  </div>
+  <div>
+      <label>Width: {{val2}}</label>
+  </div>
+  <div>
+      <label>Final: {{val}}</label>
+  </div>
+  
+</ion-content>
